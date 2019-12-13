@@ -75,11 +75,29 @@ class Movies extends Component {
 								name='director'
 								placeholder='Director (required)'
 							/>
+							<Input
+								value={this.state.cast}
+								onChange={this.handleInputChange}
+								name='cast'
+								placeholder='Cast (optional)'
+							/>
+							<Input
+								value={this.state.image}
+								onChange={this.handleInputChange}
+								name='image'
+								placeholder='Image (required)'
+							/>
+							<Input
+								value={this.state.link}
+								onChange={this.handleInputChange}
+								name='link'
+								placeholder='Link (required)'
+							/>
 							<TextArea
 								value={this.state.plot}
 								onChange={this.handleInputChange}
 								name='plot'
-								placeholder='Plot (Optional)'
+								placeholder='Plot (required)'
 							/>
 							<FormBtn
 								disabled={!(this.state.director && this.state.title)}
