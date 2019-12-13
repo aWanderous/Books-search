@@ -12,6 +12,9 @@ class Movies extends Component {
     movies: [],
     title: "",
     director: "",
+    cast: [],
+    image: "",
+    link: "",
     plot: ""
   };
 
