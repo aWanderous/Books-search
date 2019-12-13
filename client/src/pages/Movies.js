@@ -59,8 +59,6 @@ class Movies extends Component {
 	render() {
 		return (
 			<Container fluid>
-				<Row>
-					<Col size='md-6'>
 						<Jumbotron>
 							<h1>What Comics Movies Are there?</h1>
 						</Jumbotron>
@@ -90,8 +88,6 @@ class Movies extends Component {
 								Submit Movie
 							</FormBtn>
 						</form>
-					</Col>
-				</Row>
 			</Container>
 		);
 	}
