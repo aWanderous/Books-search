@@ -5,9 +5,8 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
 
-class Movies extends Component {
+class Saved extends Component {
 	state = {
 		movies: [],
 		title: "",
@@ -59,42 +58,28 @@ class Movies extends Component {
 	render() {
 		return (
 			<Container fluid>
-				<Row>
-					<Col size='md-6'>
 						<Jumbotron>
-							<h1>What Comics Movies Are there?</h1>
+							<h1>Movies On My List</h1>
 						</Jumbotron>
-						<form>
-							<Input
-								value={this.state.title}
-								onChange={this.handleInputChange}
-								name='title'
-								placeholder='Title (required)'
-							/>
-							<Input
-								value={this.state.director}
-								onChange={this.handleInputChange}
-								name='director'
-								placeholder='Director (required)'
-							/>
-							<TextArea
-								value={this.state.plot}
-								onChange={this.handleInputChange}
-								name='plot'
-								placeholder='Plot (Optional)'
-							/>
-							<FormBtn
-								disabled={!(this.state.director && this.state.title)}
-								onClick={this.handleFormSubmit}
-							>
-								Submit Movie
-							</FormBtn>
-						</form>
-					</Col>
-				</Row>
+						{this.state.movies.length ? (
+							<List>
+								{this.state.movies.map((movie) => (
+									<ListItem key={movie._id}>
+										<Link to={"/Movies/" + movie._id}>
+											<strong>
+												{movie.title} by {movie.director}
+											</strong>
+										</Link>
+										<DeleteBtn onClick={() => this.deleteMovie(movie._id)} />
+									</ListItem>
+								))}
+							</List>
+						) : (
+							<h3>No Results to Display</h3>
+						)}
 			</Container>
 		);
 	}
 }
 
-export default Movies;
+export default Saved;
