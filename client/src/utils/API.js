@@ -2,19 +2,19 @@ import axios from "axios";
 
 export default {
   // Gets all movies
-  getmovies: function() {
+  getMovies: function() {
     return axios.get("/api/movies");
   },
   // Gets the movie with the given id
-  getmovie: function(id) {
+  getMovie: function(id) {
     return axios.get("/api/movies/" + id);
   },
   // Deletes the movie with the given id
-  deletemovie: function(id) {
+  deleteMovie: function(id) {
     return axios.delete("/api/movies/" + id);
   },
   // Saves a movie to the database
-  savemovie: function(movieData) {
+  saveMovie: function(movieData) {
     return axios.post("/api/movies", movieData);
   }
 };
