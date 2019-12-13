@@ -90,7 +90,7 @@ class Movies extends Component {
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Books On My Movies</h1>
+              <h1>Movies On My List</h1>
             </Jumbotron>
             {this.state.movies.length ? (
               <List>
