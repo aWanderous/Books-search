@@ -64,48 +64,48 @@ class Movies extends Component {
 					<h1>What Comics Movies Are there?</h1>
 				</Jumbotron>
 				<form>
-					<div className='row'>
-						<div className='col-6'>
+					<Row>
+						<Col size="md-6">
 							<Input
 								value={this.state.title}
 								onChange={this.handleInputChange}
 								name='title'
 								placeholder='Title (required)'
 							/>
-						</div>
-						<div className='col-6'>
+						</Col>
+						<Col size="md-6">
 							<Input
 								value={this.state.director}
 								onChange={this.handleInputChange}
 								name='director'
 								placeholder='Director (required)'
 							/>
-						</div>
-					</div>
+						</Col>
+					</Row>
 					<Input
 						value={this.state.cast}
 						onChange={this.handleInputChange}
 						name='cast'
 						placeholder='Cast (optional)'
 					/>
-					<div className='row'>
-						<div className='col-6'>
+					<Row>
+					<Col size="md-6">
 						<Input
 							value={this.state.image}
 							onChange={this.handleInputChange}
 							name='image'
 							placeholder='Image (required)'
 						/>
-						</div>
-						<div className='col-6'>
+						</Col>
+						<Col size="md-6">
 						<Input
 							value={this.state.link}
 							onChange={this.handleInputChange}
 							name='link'
 							placeholder='Link (required)'
 						/>
-						</div>
-					</div>
+						</Col>
+					</Row>
 					<TextArea
 						value={this.state.plot}
 						onChange={this.handleInputChange}
