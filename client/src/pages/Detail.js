@@ -41,7 +41,7 @@ class Detail extends Component {
                 {this.state.movie.cast}
               </p>
               <p>
-              <Link src={this.state.movie.cast}>{this.state.movie.cast}</Link>
+              <Link href={this.state.movie.cast}>{this.state.movie.cast}</Link>
               </p>
             </article>
           </Col>
