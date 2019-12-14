@@ -4,7 +4,7 @@ function Nav() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <a className="navbar-brand" href="/">
-        React Movies Form
+        React Add Movies
       </a>
       <a className="navbar-brand" href="/Saved">
         React Saved list

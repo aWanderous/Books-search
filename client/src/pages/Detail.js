@@ -31,15 +31,15 @@ class Detail extends Component {
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
-              <h1>Plot</h1>
-              <p>
-                {this.state.movie.plot}
-              </p>
+              <img className="thumbnail" role="img" src={this.state.movie.image}></img>
               <h1>Cast</h1>
               <p>
                 {this.state.movie.cast}
               </p>
-                <img className="thumbnail" role="img" src={this.state.movie.image}></img>
+              <h1>Plot</h1>
+              <p>
+                {this.state.movie.plot}
+              </p>
               <p>
               <a href={this.state.movie.link}>Link to more details</a>
               </p>
