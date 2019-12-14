@@ -22,6 +22,7 @@ class Detail extends Component {
         <Row>
           <Col size="md-12">
             <Jumbotron>
+              <img className="img-thumbnail" src={this.state.movie.image}></img>
               <h1>
                 {this.state.movie.title} by {this.state.movie.director}
               </h1>
@@ -34,6 +35,13 @@ class Detail extends Component {
               <h1>Plot</h1>
               <p>
                 {this.state.movie.plot}
+              </p>
+              <h1>Cast</h1>
+              <p>
+                {this.state.movie.cast}
+              </p>
+              <p>
+              <Link to={this.state.movie.cast}>{this.state.movie.cast}</Link>
               </p>
             </article>
           </Col>
