@@ -22,7 +22,7 @@ class Detail extends Component {
         <Row>
           <Col size="md-12">
             <Jumbotron>
-              <img className="img-thumbnail" src={this.state.movie.image}></img>
+              <img className="thumbnail" role="img" src={this.state.movie.image}></img>
               <h1>
                 {this.state.movie.title} by {this.state.movie.director}
               </h1>
