@@ -31,11 +31,15 @@ class Detail extends Component {
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
-              <img className="thumbnail" role="img" src={this.state.movie.image}></img>
-              <h1>Cast</h1>
-              <p>
-                {this.state.movie.cast}
-              </p>
+              <Col size="md-4">
+                <img className="thumbnail" role="img" src={this.state.movie.image}></img>
+              </Col>
+              <Col size="md-6">
+                <h1>Cast</h1>
+                <p>
+                  {this.state.movie.cast}
+                </p>
+              </Col>
               <h1>Plot</h1>
               <p>
                 {this.state.movie.plot}
