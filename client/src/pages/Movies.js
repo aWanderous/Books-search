@@ -73,7 +73,7 @@ class Movies extends Component {
 								placeholder='Title (required)'
 							/>
 						</div>
-						<div>
+						<div className='col-6'>
 							<Input
 								value={this.state.director}
 								onChange={this.handleInputChange}
@@ -88,18 +88,24 @@ class Movies extends Component {
 						name='cast'
 						placeholder='Cast (optional)'
 					/>
-					<Input
-						value={this.state.image}
-						onChange={this.handleInputChange}
-						name='image'
-						placeholder='Image (required)'
-					/>
-					<Input
-						value={this.state.link}
-						onChange={this.handleInputChange}
-						name='link'
-						placeholder='Link (required)'
-					/>
+					<div className='row'>
+						<div className='col-6'>
+						<Input
+							value={this.state.image}
+							onChange={this.handleInputChange}
+							name='image'
+							placeholder='Image (required)'
+						/>
+						</div>
+						<div className='col-6'>
+						<Input
+							value={this.state.link}
+							onChange={this.handleInputChange}
+							name='link'
+							placeholder='Link (required)'
+						/>
+						</div>
+					</div>
 					<TextArea
 						value={this.state.plot}
 						onChange={this.handleInputChange}
