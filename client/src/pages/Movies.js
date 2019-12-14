@@ -72,6 +72,8 @@ class Movies extends Component {
 								name='title'
 								placeholder='Title (required)'
 							/>
+						</div>
+						<div>
 							<Input
 								value={this.state.director}
 								onChange={this.handleInputChange}
